@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQHelper", "LINQHelper\LINQHelper.csproj", "{7AE0FDE7-2B58-4916-8071-185FBCE19FEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AE0FDE7-2B58-4916-8071-185FBCE19FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE0FDE7-2B58-4916-8071-185FBCE19FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE0FDE7-2B58-4916-8071-185FBCE19FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE0FDE7-2B58-4916-8071-185FBCE19FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

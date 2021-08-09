@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/PLrt+WQ9YRZW1wwxXpOXEidVJ8VZTN6ebTXRwz64rT1Kv85G2wbyH6RgNlboesWeflG/7cdiPNG+PRseH4CIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bugra\\RiderProjects\\LINQHelper\\LINQHelper\\LINQHelper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bugra\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.15\\microsoft.netcore.app.host.win-x64.3.1.15.nupkg.sha512"
+  ],
+  "logs": []
+}
