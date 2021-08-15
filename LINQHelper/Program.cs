@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -36,6 +37,67 @@ namespace LINQHelper
             // SkipWhileDemo();
             // PagingWithTakeAndSkipDemo();
             // RangeDemo();
+            // ZipDemo();
+            // ToListDemo();
+            // ToArrayDemo();
+            // ToDictionaryDemo();
+            // CastDemo();
+        }
+
+        private static void CastDemo()
+        {
+            //tipleri birbirine eşitlemeyi sağlar
+            ArrayList arrayList = new ArrayList
+            {
+                10, 20, 30
+            };
+            IEnumerable<int> result = arrayList.Cast<int>();
+            foreach (int item in result)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static void ToDictionaryDemo()
+        {
+            List<Student> students = GetStudentsData();
+            Dictionary<int, Student> studentsDictionary = students.ToDictionary(x => x.Id);
+            foreach (KeyValuePair<int, Student> item in studentsDictionary)
+            {
+                Console.WriteLine($"Key : {item.Key} || FirstName : {item.Value.FirstName} || LastName : {item.Value.LastName}");
+            }
+        }
+
+        private static void ToArrayDemo()
+        {
+            List<int> numbers = new List<int>() { 10, 20, 30, 40, 50 };
+            int[] numbersToArray = numbers.ToArray();
+            foreach (int item in numbersToArray)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static void ToListDemo()
+        {
+            int[] numbers = { 10, 20, 30, 40, 50 };
+            List<int> numberList = numbers.ToList();
+            foreach (int item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static void ZipDemo()
+        {
+            // iki listenin aynı sırasındaki elemanları birleştirmek için kullanılır
+            int[] numbers = { 10, 20, 30, 40, 50 }; // 50 yi yazmaz çünkü karşılığı yok
+            string[] words = { "ten", "twenty", "thirty", "fourty" };
+            IEnumerable<string> result = numbers.Zip(words, (x, y) => $"{x} - {y}");
+            foreach (string item in result)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private static void RangeDemo()
@@ -46,8 +108,8 @@ namespace LINQHelper
             {
                 Console.WriteLine(item);
             }
-            
-            IEnumerable<int> value2 = Enumerable.Range(1,5).Select(x=>x*x); //1 ile 6 arasındaki sayıların karesi
+
+            IEnumerable<int> value2 = Enumerable.Range(1, 5).Select(x => x * x); //1 ile 6 arasındaki sayıların karesi
             foreach (int item in value2)
             {
                 Console.WriteLine(item);
@@ -58,7 +120,7 @@ namespace LINQHelper
         {
             int recordsPerPage = 4;
             int pageNumber = 0;
-            
+
             do
             {
                 Console.WriteLine("Enter a number between 1 and 4...");
